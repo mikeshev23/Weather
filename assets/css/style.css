@@ -1,0 +1,26 @@
+#currentWeather{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+#Search{
+    padding-top: 30px;
+}
+
+#header{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#history{
+    width: inherit;
+
+}
+    
+
+
+
+  
