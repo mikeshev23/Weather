@@ -1,133 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Weather</title>
-  </head>
-  <body>
-    <div class= "container-fluid" id="header">
-      <h2>Weather Dashboard</h2>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>What's the Weather?</title>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="container" id="Search">
-            <h3>Search for a City</h3>
-            <div class="form-group form-inline">  
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <div class= "container-fluid" id="header">
+    <h2>Weather Dashboard</h2>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="row">
+
+          <div class="container" id="citySearch">
+            <h3>Search for a City:</h3>
+            <div class="form-group form-inline">
               <input type="text" name="city" id="city" class="form-control" placeholder="City Name">
               <button class="btn btn-primary" id="submitWeather"><i class="fa fa-search"></i></button>
-
-         </div>
-        </div>
-        <table id="history"></table>
-      </div>
-        <div class="col-sm-9">
-        <div class="container" id="currentWeather">
-          <div id="result">
-
-            <div id="UV"></div>
+              <button class="btn"></i></button>
+            </div>
           </div>
-          <div class="row" id="weatherContainer">
-            <div class="col-sm-12">
-              <div id="5dayForecast">
-                <h2>5 Day Forecast:</h2>
+        </div>
+        <table id="previousCity">
+      </table>
+       
+      </div>
+
+        <div class="col-sm-9">
+        <div class="containter" id=currentWeather>
+          <div id="result"></div>
+
+
+          <div id="UV"></div>
+        </div>
+
+        <div class="row" id="weatherContainer">
+          <div class="col-sm-12">
+            <div id="5dayForecast">
+              <h2>5 Day Forecast:</h2>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title" id="day1">Card title</h5>
+
+                    <p class="card-text" id="day1Info">
+                      <ui id=icon1></ui>  
+                      <br>
+                      <ui id=temp1></ui>
+                      <br>
+                      <ui id=humidity1></ui>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="row">
-                <div class="col-sm-2">
-                  <div class="card" >
-                    <div class="card-body">
-                      <h5 class="card-title" id="day1">Card title</h5>
-  
-                      <p class="card-text" id="day1Info">
-                        <ui id=icon1></ui>  
-                        <br>
-                        <ui id=temp1></ui>
-                        <br>
-                        <ui id=humidity1></ui>
-                      </p>
-                    </div>
+              <div class="col-sm-2">
+                <div class="card"  >
+                  <div class="card-body">
+                    <h5 class="card-title" id="day2">Card title</h5>
+
+                    <p class="card-text" id="day2Info">
+                            <ui id=icon2></ui>      
+                            <br>
+                            <ui id=temp2></ui>
+                            <br>
+                            <ui id=humidity2></ui>
+                    </p>
+                   </div>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title" id="day3">Card title</h5>
+
+                    <p class="card-text"id="day3Info">
+                            <ui id=icon3></ui>
+                            <br>  
+                            <ui id=temp3></ui>
+                            <br>
+                            <ui id=humidity3></ui>
+                 </p>
                   </div>
                 </div>
-                <div class="col-sm-2">
-                  <div class="card"  >
-                    <div class="card-body">
-                      <h5 class="card-title" id="day2">Card title</h5>
-  
-                      <p class="card-text" id="day2Info">
-                              <ui id=icon2></ui>      
-                              <br>
-                              <ui id=temp2></ui>
-                              <br>
-                              <ui id=humidity2></ui>
-                      </p>
-                     </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title" id="day4">Card title</h5>
+
+                    <p class="card-text"id="day4Info">
+                            <ui id=icon4></ui>
+                            <br>  
+                            <ui id=temp4></ui>
+                            <br>
+                            <ui id=humidity4></ui>
+                
+                    </p>
                   </div>
                 </div>
-                <div class="col-sm-2">
-                  <div class="card" >
-                    <div class="card-body">
-                      <h5 class="card-title" id="day3">Card title</h5>
-  
-                      <p class="card-text"id="day3Info">
-                              <ui id=icon3></ui>
-                              <br>  
-                              <ui id=temp3></ui>
-                              <br>
-                              <ui id=humidity3></ui>
-                   </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="card" >
-                    <div class="card-body">
-                      <h5 class="card-title" id="day4">Card title</h5>
-  
-                      <p class="card-text"id="day4Info">
-                              <ui id=icon4></ui>
-                              <br>  
-                              <ui id=temp4></ui>
-                              <br>
-                              <ui id=humidity4></ui>
+              </div>
+              <div class="col-sm-2">
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title" id="day5">Card title</h5>
+
+                    <p class="card-text"id="day5Info">
+                            <ui id=icon5></ui>
+                            <br>  
+                            <ui id=temp5></ui>
+                            <br>
+                            <ui id=humidity5></ui>
                   
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="card" >
-                    <div class="card-body">
-                      <h5 class="card-title" id="day5">Card title</h5>
-  
-                      <p class="card-text"id="day5Info">
-                              <ui id=icon5></ui>
-                              <br>  
-                              <ui id=temp5></ui>
-                              <br>
-                              <ui id=humidity5></ui>
-                    </h5>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+  <script src="./assets/js/script.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script>
+    moment().format();
+  </script>
+</body>
+
 </html>
